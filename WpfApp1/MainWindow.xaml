@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1000"
+        ResizeMode="NoResize">
+  <Grid>
+    <Rectangle  x:Name="kep" HorizontalAlignment="Left"  Height="200" Margin="150,250,0,0" Stroke="Black" VerticalAlignment="Top" Width="250">
+      <Rectangle.Fill>
+        <ImageBrush ImageSource="img/unknown.png"></ImageBrush>
+      </Rectangle.Fill>
+      <Rectangle.RenderTransform>
+        <TransformGroup>
+          <RotateTransform x:Name="elforditas" Angle="360" CenterX="125" CenterY="100"/>
+          <SkewTransform x:Name="transzform" AngleX="0" AngleY="0"></SkewTransform>
+        </TransformGroup>
+      </Rectangle.RenderTransform>
+
+    </Rectangle>
+    <Label Content="Vízszintes" Margin="600,00,0,0" FontSize="20"/>
+    <Label Content="Függőleges" Margin="580,45,0,0" FontSize="20"/>
+    <Label Margin="580,50,0,0" FontSize="20">
+
+    </Label>
+    <StackPanel HorizontalAlignment="Left" Background="Yellow"  Height="100" Margin="700,0,0,0" VerticalAlignment="Top" Width="280">
+      <Slider Thumb.DragCompleted="asd" x:Name="vizszintes_p" Height="50" Value="150" Minimum="1" Maximum="300"/>
+      <Slider Thumb.DragCompleted="asd" x:Name="fuggoleges_p" Height="50" Value="150" Minimum="1" Maximum="300"/>
+
+    </StackPanel>
+    <Label Content="Vízszintes" Margin="600,110,0,0"  FontSize="20"/>
+    <Label Content="Függőleges"  Margin="580,160,0,0" FontSize="20"/>
+
+    <StackPanel HorizontalAlignment="Left" Background="Red" Height="100" Margin="700,110,0,0" VerticalAlignment="Top" Width="280">
+      <Slider Thumb.DragCompleted="asd" Height="50" x:Name="vizszintes_n"  Value="250" Minimum="1" Maximum="500"/>
+      <Slider Thumb.DragCompleted="asd" Height="50" x:Name="fuggoleges_n" Value="200" Minimum="1" Maximum="400"/>
+    </StackPanel>
+    <Label Content="Szög" Margin="600,220,0,0"  FontSize="20"/>
+
+    <StackPanel HorizontalAlignment="Left" Background="Blue" Height="50" Margin="700,220,0,0" VerticalAlignment="Top" Width="280">
+      <Slider Thumb.DragCompleted="asd" x:Name="szog" Maximum="360" Minimum="1" Value="360" Height="50"/>
+    </StackPanel>
+    <Label Content="Vízszintes" Margin="600,280,0,0" FontSize="20"/>
+    <Label Content="Függőleges" Margin="580,330,0,0" FontSize="20"/>
+    <StackPanel HorizontalAlignment="Left"  Background="Green" Height="100" Margin="700,280,0,0" VerticalAlignment="Top" Width="280">
+      <Slider Thumb.DragCompleted="asd" x:Name="vizszintes_fe" Height="50" Maximum="89" Minimum="0" Value="0"/>
+      <Slider Thumb.DragCompleted="asd" x:Name="fuggoleges_fe" Height="50" Maximum="89" Minimum="0" Value="0"/>
+    </StackPanel>
+    <Rectangle HorizontalAlignment="Left" Fill="Yellow" Width="15" Stroke="Black" Height="15" Margin="680,80,0,0"/>
+    <Rectangle HorizontalAlignment="Left" Fill="Red" Width="15" Stroke="Black" Height="15" Margin="680,120,0,0"/>
+    <Rectangle HorizontalAlignment="Left" Fill="Blue" Width="15" Stroke="Black" Height="15" Margin="680,160,0,0"/>
+    <Rectangle HorizontalAlignment="Left" Fill="Green" Width="15" Stroke="Black" Height="15" Margin="680,200,0,0"/>
+    <Label HorizontalAlignment="Left" VerticalAlignment="Center" Content="Poziciónálás" Margin="700,80,0,0"/>
+    <Label HorizontalAlignment="Left" VerticalAlignment="Center" Content="Nagyítás" Margin="700,120,0,0"/>
+    <Label HorizontalAlignment="Left" VerticalAlignment="Center" Content="Forgatás" Margin="700,160,0,0"/>
+    <Label HorizontalAlignment="Left" VerticalAlignment="Center" Content="Ferdítés" Margin="700,200,0,0"/>
+    <Button  Content="Alaphelyzetbe!" x:Name="gomba" Click="gomb" FontWeight="Black" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+
+
+  </Grid>
+</Window>
